@@ -2,7 +2,7 @@
 
 Summary: Issabel Fax Module
 Name: issabel-fax
-Version: 5.0.0
+Version: 6.0.0
 Release: 1
 License: GPL
 Group:   Applications/System
