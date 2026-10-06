@@ -64,7 +64,7 @@ class core_Fax
      * Constructor
      *
      */
-    public function core_Fax()
+    public function __construct()
     {
         $this->_pACL    = NULL;
         $this->_id_user = NULL;

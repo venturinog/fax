@@ -38,9 +38,9 @@ class SOAP_Fax extends core_Fax
      *
      * @param  object   $objSOAPServer     SOAP Server Object
      */
-    public function SOAP_Fax($objSOAPServer)
+    public function __construct($objSOAPServer)
     {
-         parent::core_Fax();
+         parent::__construct();
          $this->objSOAPServer = $objSOAPServer;
     }
 
