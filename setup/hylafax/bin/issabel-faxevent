@@ -428,7 +428,7 @@ function getIdModemDevice($conn, $sModemDevice)
         $sth = $conn->query('SELECT id FROM fax ORDER BY dev_id LIMIT 1');
         $tuple = $sth->fetch(PDO::FETCH_ASSOC);
         $sth->closeCursor();
-        if (!$tuple) dblog_exit('(internal) No fax devices found - this should not happen!');
+        if (!$tuple) dblog_exit($conn, '(internal) No fax devices found - this should not happen!');
     }
     return (int)$tuple['id'];
 }
@@ -539,6 +539,6 @@ function sendEmailFax($conn, $sRepresentativeName, $sDestinationEmail, $sCompany
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
     
     if (!$mail->Send())
-        dblog_exit('Failed to send email: '.$emailInfo['subject']);
+        dblog_exit($conn, 'Failed to send email: '.$emailInfo['subject']);
 }
 ?>
