@@ -84,7 +84,7 @@ class paloFax {
     }
 
     function createFaxExtension($virtualFaxName, $extNumber, $extSecret, 
-        $destinationEmail, $CIDName="", $CIDNumber="", $countryCode, $areaCode)
+        $destinationEmail, $CIDName, $CIDNumber, $countryCode, $areaCode)
     {
         // 1) Averiguar el numero de dispositivo que se puede usar y el numero de puerto
         $devId = $this->_getNextAvailableDevId();
